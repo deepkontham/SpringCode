@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="message" class="com.ciq.Greetingmsg">
+<!-- 		collaborators and configuration for this bean go here -->
+		<property name="id" value="1"></property>
+		<property name="name" value="pradeep"></property>
+
+
+	</bean>
+	<bean id="constructor" class="com.ciq.Greetingmsg">
+<!-- 		<constructor-arg name="id" value="1"></constructor-arg> -->
+<!-- 		<constructor-arg name="name" value="pradeep"></constructor-arg> -->
+
+	</bean>
+
+
+
+
+
+</beans>
+
