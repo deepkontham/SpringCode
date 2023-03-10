@@ -1,7 +1,10 @@
 package com.ciq.client;
 
 import java.util.ArrayList;
+
 import java.util.List;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -30,7 +33,37 @@ public class Personclient {
 //		 
 //	}
 	 //persController.delete(4);
-	 persController.update(p1);
+	// persController.update(p1);
+	 //RetriveAll persons with RoWMapper
+//	 ArrayList<Person> allPersons = persController.allPersons();
+//	 for (Person person : allPersons) {
+//		 System.out.println(person);
+//		
+//	}
+//	 Person getbyid = persController.getbyid(3);
+//	 System.out.println(getbyid);
+	 
+//	 Person getbyname = persController.getbyname("vamshi");
+//	 System.out.println(getbyname );
+	 
+	 //Resultset extractor
+//	 List<Person> persons = persController.getPersons();
+//	 for (Person person : persons) {
+//		 System.out.println(person);
+//		
+//	}
+	 //resultset getby id
+//	 Person getbyids = persController.getbyids(3);
+//	 System.out.println(getbyids);
+//	 
+	 //resultset getby name
+	 Person getbynames = persController.getbynames("vamshi");
+	 System.out.println(getbynames);
+	 
+	}
+	 
+	
+	 
 	}
 	
-}
+

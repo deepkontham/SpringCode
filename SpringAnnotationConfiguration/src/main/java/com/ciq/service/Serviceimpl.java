@@ -1,5 +1,6 @@
 package com.ciq.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +39,32 @@ public class Serviceimpl implements PersonService{
 
 	}
 
+	public ArrayList<Person> allperssons() {
+		
+		return persondaoimp.allperssons();
+	}
+
+	public Person getbyid(int id) {
+		return persondaoimp.getbyid(id);
+	}
+
+	public Person getbyname(String name) {
+		return persondaoimp.getbyname(name);
+	}
+
+	public Person getbyids(int id) {
+		return persondaoimp.getbyids(id);
+	}
+
+	public Person getbynames(String name) {
+		return persondaoimp.getbynames(name);
+	} 
+
 	public List<Person> getPersons() {
 		// TODO Auto-generated method stub
-		return null;
+		return (ArrayList<Person>) persondaoimp.getPersons();
 	}
+	
+
 
 }
