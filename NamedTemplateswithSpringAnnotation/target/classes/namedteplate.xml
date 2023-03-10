@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- <bean class="org.springframework.beans.factory.config.propertyplaceholderconfigurer"> -->
+	<!-- <property name="location" value="db.properties"/> -->
+	<!-- </bean> -->
+
+	<context:property-placeholder
+		location="db.properties" />
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.*" />
+
+	<bean id="namedParameter"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="datasourceRef" />
+
+	</bean>
+
+	<bean id="datasourceRef"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${Driver}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${user}"></property>
+		<property name="password" value="${pwd}"></property>
+
+	</bean>
+
+
+
+</beans>
